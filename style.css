@@ -599,3 +599,71 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 600px) {
+  header {
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  header h1 {
+    font-size: 2.1rem;
+    line-height: 1.1;
+  }
+  header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .card {
+    width: 95vw;
+    min-width: unset;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .gallery-item img {
+    height: 45vw;
+    min-height: 120px;
+    max-height: 220px;
+  }
+  .memories {
+    font-size: 1.05rem;
+    padding: 0 0.5rem;
+  }
+  .memories p {
+    padding: 1rem 0.2rem;
+  }
+  .timeline {
+    padding: 0.5rem 0;
+    max-width: 100vw;
+  }
+  .timeline::before {
+    left: 8px;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(odd) {
+    width: 100%;
+    margin: 1.2rem 0 1.2rem 0.5rem !important;
+  }
+  .timeline-item::before,
+  .timeline-item:nth-child(odd)::before {
+    left: -1.5rem !important;
+    right: auto !important;
+  }
+  footer {
+    padding: 1.2rem 0;
+    font-size: 1rem;
+  }
+  .social-links a {
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+  }
+}
