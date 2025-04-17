@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bday - manu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="animate-fade-in">
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <h1>Feliz Aniversário, Minha Princesa!</h1>
+    <p>
+      Hoje celebramos o dia mais especial: o seu! <br>
+      Que este site seja uma pequena homenagem do modo que seu namrorado sabe fazer.
+    </p>
+  </header>
+
+  <section class="animate-fade-in">
+    <h2 class="titulo-secao">Para a minha preta</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>lc te ama</h3>
+        <p>
+          Amo-te de tal forma que não consigo me expressar em palavras.
+        </p>
+      </div>
+      <div class="card">
+        <h3>gratidão</h3>
+        <p>
+          Sou grato por cada momento ao seu lado. Que venham muitos outros aniversários juntos!
+        </p>
+      </div>
+      <div class="card">
+        <h3>não esquece</h3>
+        <p>
+          Eu e você, você e eu. Parabéns, minha linda! 💕
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="titulo-secao">Nossa História</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Primeira mensagem</h3>
+        <p>Lembra daquele "ei, manda rep"?</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Primeiro "eu te amo"</h3>
+        <p>Seguinte! eu te amo.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Namoro Oficial</h3>
+        <p>Discussão e pedidos não oficiais. Mas que bom que eu tive coragem de pedir, né?</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="titulo-secao">Galeria de Momentos</h2>
+    <div class="memories">
+      <p>
+        Algumas imagens que retratam momentos especiais nossos e que eu me recordo perfeitamente. Desculpa pela qualidade, te amokk.
+      </p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/assets/images/primeiraMet.jpeg" alt="Primeira Met">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/images/surtando.jpeg" alt="Surto1">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/images/surtandopt2.jpeg" alt="Surto 2">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/images/amoessa.jpeg" alt="amoEssa">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="titulo-secao">Leia com amor.</h2>
+    <div class="memories">
+      <p>
+        Amor, sei que podemos não estar na melhor fase, mas hoje não é sobre nós e sim sobre você. Há exatos 17 anos,
+        você nasceu e desde então muda vidas. Queria que só por um momento, um único instante, você fosse capaz de se ver 
+        como eu te vejo, uma mulher forte, corajosa, que apesar de tudo, <b>TUDO MESMO</b>, continua a seguir em frente.
+        Espero que você possa comemorar seu dia da melhor maneira possível e queiro que você saiba que independente de qualquer
+        situação, você pode sempre, <b>SEMPRE MESMO</b>, contar com seu namorado aqui.
+      </p>
+
+      <p>
+        Você já me conhece, sabe que não sou muito bom com palavras, mas quero tentar demonstrar um pouco, tentar consertar
+        aquilo que venho falhando e nenhuma data melhor do que a SUA data. Eu te amo demais e do fundo do meu coração, desejo
+        tudo do bom e do melhor pra você, meu amor.
+      </p>
+
+      <p>
+        Bem, vou ficando por aqui, espero que você tenha gostado. E..ah! Mais uma vez, feliz dia, Minha Princesa!
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com muito amor para <b>VOCÊ</b> 💖</p>
+    <div class="social-links">
+    </div>
+  </footer>
+
+  <script>
+    
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      document.querySelector('.floating-hearts').appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 300);
+
+   
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    });
+    document.querySelectorAll('section').forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
